@@ -16,7 +16,7 @@ defmodule CachexTest.Warmers.DataWarmer do
         {:ok, [{date, Util.fetch_data(date)}]}
       rescue
         error ->
-          Logger.error("Error While Warming PBD - #{inspect(error)}")
+          Logger.error("Error While Warming Data - #{inspect(error)}")
           Logger.error(Exception.format(:error, error, __STACKTRACE__))
 
           :ignore
